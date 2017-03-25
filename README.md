@@ -133,7 +133,7 @@ The descriptions of all characters are how they are at the time of their respect
   * _Appearance_ ::  
   * _Personality_ ::  
   * _Motiviations_ ::
-  * _Weapon of choice_ :: 
+  * _Weapon of choice_ ::
   * _Memento_ ::
 * __Brief Scene Description__:
   * Lorem Ipsum
@@ -145,38 +145,46 @@ The descriptions of all characters are how they are at the time of their respect
 The timeline for project deliverables
 
 * ### Art
-  * Campfire scene (w/ just Sabah): __Apr 20__
+  * Campfire scene (w/ just Sabah): __Sun, Apr 2__
   * Campfire profiles:
-    * Character 1: __Apr 20__
-    * Character 2: __Apr 20__
-    * Character 3: __Apr 20__
-    * Character 4: __Apr 20__
-    * Character 5: __Apr 20__
+    * Character 1: __Sun, Apr 9__
+    * Character 2: __Sun, Apr 9__
+    * Character 3: __Sun, Apr 9__
+    * Character 4: __Sun, Apr 9__
+    * Character 5: __Sun, Apr 9__
   * Mementos:
-    * Character 1: __Apr 20__
-    * Character 2: __Apr 20__
-    * Character 3: __Apr 20__
-    * Character 4: __Apr 20__
-    * Character 5: __Apr 20__
+    * Character 1: __Sun, Apr 23__
+    * Character 2: __Sun, Apr 23__
+    * Character 3: __Sun, Apr 23__
+    * Character 4: __Sun, Apr 23__
+    * Character 5: __Sun, Apr 23__
   * Vignettes:
-    * Character 1: __Apr 20__
-    * Character 2: __Apr 20__
-    * Character 3: __Apr 20__
-    * Character 4: __Apr 20__
-    * Character 5: __Apr 20__
+    * Character 1: __Sun, Apr 9__
+    * Character 2: __Sun, Apr 16__
+    * Character 3: __Sun, Apr 23__
+    * Character 4: __Sun, Apr 30__
+    * Character 5: __Sun, May 7__
 
 * ### Writing
-  * Character 1 vignette: __Apr 20__
-  * Character 2 vignette: __Apr 20__
-  * Character 3 vignette: __Apr 20__
-  * Character 4 vignette: __Apr 20__
-  * Character 5 vignette: __Apr 20__
+  * Profiles:
+    * Character 1: __Sun, Apr 2__
+    * Character 2: __Sun, Apr 2__
+    * Character 3: __Sun, Apr 2__
+    * Character 4: __Sun, Apr 2__
+    * Character 5: __Sun, Apr 2__
+  * Vignettes:
+    * Character 1: __Sun, Apr 2__
+    * Character 2: __Sun, Apr 9__
+    * Character 3: __Sun, Apr 16__
+    * Character 4: __Sun, Apr 23__
+    * Character 5: __Sun, Apr 30__
+
 
 * ### Technical
-  * Moving between scenes and interaction: __Apr 20__
-  * Parallax effect: __Apr 20__
-  * Server: __Apr 20__
+  * Moving between scenes and interaction: __Sun, Apr 9__
+  * Parallax effect: __Sun, Apr 23__
+  * Server: __Sun, Apr 30__
 
 * ### Administrative
-  * Project presentation draft: __Apr 20__
-  * Revised project presentation: __Apr 20__
+  * Project presentation draft: __Sun, Apr 30__
+  * Revised project presentation: __Sun, May 7__
