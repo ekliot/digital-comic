@@ -93,18 +93,18 @@ The descriptions of all characters are how they are at the time of their respect
 ## Djindo
 
 * __Stats__:
-  * _Age_ :: ??
-  * _Gender_ :: Male?
-  * _Height_ :: ??
-  * _Weight_ :: ??
+  * _Age_ :: 23
+  * _Gender_ :: Male
+  * _Height_ :: 5'8"
+  * _Weight_ :: ~140 lbs
 * __Details__:
-  * _Appearance_ ::  
-  * _Personality_ ::  
-  * _Motiviations_ ::
-  * _Weapon of choice_ ::
-  * _Memento_ ::
+  * _Appearance_ :: You know this best.
+  * _Personality_ :: Few thieves are more honourable, fewer yet knaves are more trustworthy than Djindo. Or so he says. What can be known, is that Djindo has no reservations or illusions of his own station and specialty. Djindo is an eccentric, a haphazard collection of odds and ends. Certainly, his odd travels may have no end in sight, as he scours the world in a tireless pursuit of his own wanderlust. He gets by on the occasional generosity of others' foolishness and neglectfulness, and has picked up a great many tales to spin to those that may ask (all are true, but not all are his own, if you must ask). A practical man by any means, he is concerned entirely with what is happening now, forgetful of the past and unconcerned with the future.
+  * _Motiviations_ :: Looking for a good death, one he would tell a tale of were he not, you know, dead. Until then, anything that can add a chapter to the rich tapestry of his misadventures, one more trinket for the bottomless bag, or just another piece of silver to warm him for the night.
+  * _Weapon of choice_ :: A tulwar, pricked from the clutches of a cavalry commander, just so happening to be laid alone and undisturbed alongside the road he was traveling.
+  * _Memento_ :: ???
 * __Brief Scene Description__:
-  * `TODO`
+  * Djindo prepares to accept his grand death, but at the moment of truth it is denied from him by Sabah (?). Final panel, "Oh, come on!"
 
 ## {Clansman}
 
@@ -122,7 +122,7 @@ The descriptions of all characters are how they are at the time of their respect
 * __Brief Scene Description__:
   * `TODO`
 
-### template
+<!-- ### template
 
 * __Stats__:
   * _Age_ ::
@@ -136,7 +136,7 @@ The descriptions of all characters are how they are at the time of their respect
   * _Weapon of choice_ ::
   * _Memento_ ::
 * __Brief Scene Description__:
-  * `TODO`
+  * `TODO` -->
 
 ---
 
