@@ -38,11 +38,11 @@ The descriptions of all characters are how they are at the time of their respect
   * _Height_ :: 5'9"
   * _Weight_ :: ~170 lbs
 * __Details__:
-  * _Appearance_ ::
-  * _Personality_ ::
-  * _Motiviations_ ::
+  * _Appearance_ :: Lean, weathered by desert travel. Olive-skinned, almond-shaped earthy green eyes. Pointed chin, unimposing hooked nose. High cheekbones. Sparse stubble. Small ears, close/flat against the head. Feathered and unevenly cropped black hair, roughly 3-5" in length, bangs swept aside and held in place with a thin circlet (is this circlet special?). Wearing an assortment of traditional furs and cloths. Generally a non-uniform impression. Light sandals, no gloves. Hands are bony, prominent knuckles, palms are calloused. Carries a sleeping roll, a pack with him containing various traveling supplies, a couple weapons and backups (what are these?).
+  * _Personality_ :: Brash and foolhardy, eagle-eyed. Very perceptive of the world around him, can make astute and detailed observations of people and things happening around him. However, has a very shortsighted introspective view, and has great difficulty judging the consequences or weight of his actions. As a result, he tends to rush into situations, being very self-confident and observant of obstacles in his path, yet gets into trouble once his actions lead to unforeseen (to him) consequences.
+  * _Motiviations_ :: Wants to learn of his parents' fate when he was an infant. This is also aligned with his desire to understand more of <PLACE>, which at this point he has learnt his father was intimately tied to. He is trying to follow through on how his father was involved, and how that led to him and his mother disappearing before he was picked up by clansmen. While initially he was repulsed and feared further involvement with the <PEOPLE>, since learning of his father's involvement he has become very active in pursuing their traces, on one hand to save others from his father's fate, but also because, given his nature, he has developed an intimate insight into their culture and being, and as such struggles with humanity's relationship with them, and Benito.
 
-## {Dapper Gentleman}
+## Markos Benito Adamoli
 
 * __Stats__:
   * _Age_ :: Mid-40's
@@ -50,11 +50,11 @@ The descriptions of all characters are how they are at the time of their respect
   * _Height_ :: 5'10.5"
   * _Weight_ :: ~160 lbs
 * __Details__:
-  * _Appearance_ ::  
-  * _Personality_ ::  
-  * _Motiviations_ ::
-  * _Weapon of choice_ ::
-  * _Memento_ ::
+  * _Appearance_ :: Sharp, elegant, dapper. Wears a dark suit-vest like [this](http://www.hikoreanfashion.com/13926-thickbox_default/black-double-layered-chain-suit-vests.jpg) or [this](http://dallasvintageshop.com/wp-content/uploads/2014/08/Photo-Aug-18-6-51-25-PM-668x1024.jpg), worn from travel but kept in fine condition. Underneath he wears a striped shirt, also stained with travel. Loose fitting pants similar to [this](http://media-cache-ec0.pinimg.com/736x/cc/9e/ba/cc9eba8f0ad7c3e74915bb301e9e60b7.jpg) or [this](http://vignette3.wikia.nocookie.net/fallout/images/b/b4/CourierDusterYesMan.png/revision/latest?cb=20110925232345). Wears elegant, straightforward  boots/shoes, similar to [these](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.coolmenshoes.com%2Fwp-content%2Fuploads%2F2013%2F05%2F11%2F0%2FTod-s-No_Code-Men-s-Suede-Desert-Boots-5-1.jpg&f=1). At his hip is a rapier, of impeccable craftsmanship and an otherworldly silver gleam. A chain is visible, leading to some pocket where a locket lies. He is naturally fair-skinned, perhaps a little tanned, but long travels have tanned and roughed his skin. His face is squarish, with a strong jaw hidden behind a thick, salt and pepper stubble. He seems to have a fatherly, contented half-smile on his face at all times. His eyes are a bright blue, sparked full of life, framing a chunky nose with a high bridge. His receding hair, black and gray, is cropped short and combed to the side.
+  * _Personality_ :: Immediately charismatic, soft-spoken, very comforting fatherly voice. Very tactical and manipulative, knows how to treat people to get what he wants and needs, and always has in his sight the "big picture," allowing him to make intelligent decisions to stay one step ahead.
+  * _Motiviations_ :: To catalog as much knowledge as possible of <PLACE>, such that he may use their secrets (and perhaps their "assistance") in his quest to resurrect his son and wife. In time, his motives become corrupted with power and insanity.
+  * _Weapon of choice_ :: Rapier
+  * _Memento_ :: Locket?
 * __Brief Scene Description__:
   * Lorem Ipsum
 
