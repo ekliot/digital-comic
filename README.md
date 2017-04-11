@@ -106,19 +106,19 @@ The descriptions of all characters are how they are at the time of their respect
 * __Brief Scene Description__:
   * Djindo prepares to accept his grand death, but at the moment of truth it is denied from him by Sabah (?). Final panel, "Oh, come on!"
 
-## {Clansman}
+## Hatun Isht
 
 * __Stats__:
-  * _Age_ :: ??
-  * _Gender_ :: Female?
-  * _Height_ :: ??
-  * _Weight_ :: ??
+  * _Age_ :: mid-60s
+  * _Gender_ :: Female
+  * _Height_ :: 5'8.5"
+  * _Weight_ :: ~150lbs
 * __Details__:
-  * _Appearance_ ::  
-  * _Personality_ ::  
-  * _Motiviations_ ::
-  * _Weapon of choice_ ::
-  * _Memento_ ::
+  * _Appearance_ :: Despite her age, she stands upright and proud. Garbed in layers heavy cloths as old as herself, accentuated with odds and ends of a medley of wildlife, including bones, claws, horns, etc. Her face is set with deep wrinkles, and her jaw is wide. A sagging nose shadows a scowling lip, and her eyes are sunken and serious. She wears a crown of interlocked animal horns. Among her many cloths are equally many pouches and satchels,, laden with powders, herbs, and other such ingredients and talismans. She carries with her a great spear, a tribal artifact, adorned with jingling charms, feathers, and bones.
+  * _Personality_ :: Despite her savage appearance, she harbors a great deal of warmth for Sabah, a sort of surrogate son. She, in her age, has learnt a great deal, not least of all patience. Compared to Sabah, she is something of a foil, being slow to action and deeply introspective, but likewise being less than capable of analyzing and understanding the world present around her. The exception to this is through the lens of spirituality and her own medicine practice, and her encyclopedic knowledge of the tribe's entire history and those of their surrounding tribes, she is able to gain an unparalleled and unconventional insight into the greater world around herself. Despite their divergent personalities, she bonds with Genesia over similar circumstances.
+  * _Motiviations_ :: Had to murder her husband, the chief of the tribe and the adopting father of Sabah, under duress. While the tribe sympathized with her, it was the tribe's law that she must be exiled to death. Conveniently, Sabah was at the same time departing on his trip with Markos, so she chose to travel with them, providing spiritual and survival advisement. To be entirely honest, she just wanted to spend her final days with Sabah, knowing better than any that her end is rapidly approaching, and to rest easy knowing she guided Sabah in safety. Of course, in her final hours, she realizes she has unwittingly doomed Sabah...
+  * _Weapon of choice_ :: Great-spear
+  * _Memento_ :: Talisman of sort? Some kind of motherly bond to Sabah?
 * __Brief Scene Description__:
   * `TODO`
 
