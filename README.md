@@ -1,4 +1,4 @@
-`PEOPLE`# ENGL 318 Final Project
+# ENGL 318 Final Project
 
 ## Who
 
@@ -39,8 +39,8 @@ The descriptions of all characters are how they are at the time of their respect
   * _Weight_ :: ~170 lbs
 * __Details__:
   * _Appearance_ :: Lean, weathered by desert travel. Olive-skinned, almond-shaped earthy green eyes. Pointed chin, unimposing hooked nose. High cheekbones. Sparse stubble. Small ears, close/flat against the head. Feathered and unevenly cropped black hair, roughly 3-5" in length, bangs swept aside and held in place with a thin circlet (is this circlet special?). Wearing an assortment of traditional furs and cloths. Generally a non-uniform impression. Light sandals, no gloves. Hands are bony, prominent knuckles, palms are calloused. Carries a sleeping roll, a pack with him containing various traveling supplies, a couple weapons and backups (what are these?).
-  * _Personality_ :: Brash and foolhardy, eagle-eyed. Very perceptive of the world around him, can make astute and detailed observations of people and things happening around him. However, has a very shortsighted introspective view, and has great difficulty judging the consequences or weight of his actions. As a result, he tends to rush into situations, being very self-confident and observant of obstacles in his path, yet gets into trouble once his actions lead to unforeseen (to him) consequences.
-  * _Motiviations_ :: Wants to learn of his parents' fate when he was an infant. This is also aligned with his desire to understand more of `PLACE`, which at this point he has learnt his father was intimately tied to. He is trying to follow through on how his father was involved, and how that led to him and his mother disappearing before he was picked up by clansmen. While initially he was repulsed and feared further involvement with the `PEOPLE`, since learning of his father's involvement he has become very active in pursuing their traces, on one hand to save others from his father's fate, but also because, given his nature, he has developed an intimate insight into their culture and being, and as such struggles with humanity's relationship with them, and Benito.
+  * _Personality_ :: Brash and foolhardy, eagle-eyed. Very perceptive of the world around him, can make astute and detailed observations of people and things happening around him. However, has a very shortsighted introspective view, and has great difficulty judging the consequences or weight of his actions. As a result, he tends to rush into situations, being very self-confident and observant of obstacles in his path, yet gets into trouble once his actions lead to unforeseen (to him) consequences. He is possessed of a great imagination and showmanship, leading to tricky situations where he will, while solving whatever he first set out to solve, get into even more trouble he will need to get out of. Yet, such is his unerring luck that his overzealous nature always work out to his or the group's advantage. Over the course of adventures, as he grows and matures (initially 16), he learns from his comrades and develops a more levelheaded and rational approach, though retaining his showmanship (and perhaps expanding it, with new skills).
+  * _Motiviations_ :: Wants to learn of his parents' fate when he was an infant. This is also aligned with his desire to understand more of `PLACE`, which at this point he has learnt his father was intimately tied to. He is trying to follow through on how his father was involved, and how that led to him and his mother disappearing before he was picked up by clansmen. While initially he was repulsed and feared further involvement with the `PEOPLE`, since learning of his father's involvement he has become very active in pursuing their traces, on one hand to save others from his father's fate, but also because, given his nature, he has developed an intimate insight into their culture and being, and as such struggles with humanity's relationship with them, and Markos.
 
 ## Markos Benito Adamoli
 
@@ -106,7 +106,7 @@ The descriptions of all characters are how they are at the time of their respect
 * __Brief Scene Description__:
   * Djindo prepares to accept his grand death, but at the moment of truth it is denied from him by Sabah (?). Final panel, "Oh, come on!"
 
-## Hatun Isht
+## Hatun Ishth
 
 * __Stats__:
   * _Age_ :: mid-60s
