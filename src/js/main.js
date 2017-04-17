@@ -2,7 +2,9 @@
 (function() {
   var test;
 
-  test = function() {
+  window.App = {};
+
+  App.test = test = function() {
     return console.log("this is a test");
   };
 
