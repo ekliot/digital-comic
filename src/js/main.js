@@ -8,4 +8,6 @@
     return console.log("this is a test");
   };
 
+  asdfa;
+
 }).call(this);
