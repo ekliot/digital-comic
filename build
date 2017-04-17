@@ -1,0 +1,5 @@
+#!/bin/bash
+
+projdir="/home/ekliot/school/engl/318/project/"
+
+coffee --compile --output $projdir/src/js/ $projdir/src/coffee/
