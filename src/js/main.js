@@ -14,7 +14,7 @@
     console.log('window is loaded, populating campfire...');
     App.campfire = {};
     App.campfire.scene = $('#Campfire');
-    return $.getJSON('campfire', App.parseJSON);
+    return $.getJSON('src/json/campfire.json', App.parseJSON);
   };
 
   App.to_vignette = to_vignete = function(vignette) {

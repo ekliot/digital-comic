@@ -34,7 +34,7 @@ window.onload = () ->
   App.campfire = {}
   App.campfire.scene = $( '#Campfire' )
   # App.campfire.data  = App.getJSON 'campfire', App.parseJSON
-  $.getJSON 'campfire', App.parseJSON
+  $.getJSON 'src/json/campfire.json', App.parseJSON
 
 # method to transition from campfire to vignette
 App.to_vignette = to_vignete = ( vignette ) ->
