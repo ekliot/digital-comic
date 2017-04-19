@@ -1,6 +1,6 @@
 A scene has an id
 Each scene has layers, which are independent of panels (panels are single-layer affairs)
-Each scene is arranged into panels, which have the id and the x-y coords of the center of the respective panel
+Each scene is arranged into panels, which have the id and the x-y coords of the center of the respective panel (for transitioning)
 
 Each layer has an id, a depth (for parallax), an x-y (top-left corner), and the image filename
 
