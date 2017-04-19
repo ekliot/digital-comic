@@ -57,10 +57,10 @@
     for (i = 0, len = ref.length; i < len; i++) {
       char = ref[i];
       console.log("building " + char + "...");
-      $.getJSON("src/json/" + char + ".json", App.build_from_JSON);
+      $.getJSON("src/json/" + char + ".json", build_from_JSON);
     }
     console.log('window is loaded, populating campfire...');
-    return $.getJSON('src/json/campfire.json', App.build_from_JSON);
+    return $.getJSON('src/json/campfire.json', build_from_JSON);
   };
 
 }).call(this);

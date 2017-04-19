@@ -54,7 +54,7 @@ window.onload = () ->
   # parse vignette datas
   for char in App.chars
     console.log "building #{char}..."
-    $.getJSON "src/json/#{char}.json", App.build_from_JSON
+    $.getJSON "src/json/#{char}.json", build_from_JSON
 
   console.log 'window is loaded, populating campfire...'
-  $.getJSON 'src/json/campfire.json', App.build_from_JSON
+  $.getJSON 'src/json/campfire.json', build_from_JSON
