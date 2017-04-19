@@ -1,0 +1,10 @@
+{
+  "layers": [
+    {
+      "id": "CampfireBack",
+      "depth": 0.00,
+      "image": "campire-bg.png",
+      "x": 0, "y": 0
+    },
+  ]
+}
