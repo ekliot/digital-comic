@@ -11,7 +11,7 @@
  */
 
 (function() {
-  var build_from_JSON, to_campfire, to_vignette;
+  var build_from_JSON;
 
   (function($) {})(jQuery);
 
@@ -61,14 +61,6 @@
   /*
     App methods
    */
-
-  App.to_vignette = to_vignette = function(char) {
-    return console.log("going to " + char + "'s vignette");
-  };
-
-  App.to_campfire = to_campfire = function() {
-    return console.log("returning to campfire");
-  };
 
 
   /*
