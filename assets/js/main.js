@@ -11,7 +11,7 @@
  */
 
 (function() {
-  var build_from_JSON;
+  var build_from_JSON, to_campfire;
 
   (function($) {})(jQuery);
 
@@ -40,11 +40,12 @@
 
   build_from_JSON = function(data) {
     if (data.id == null) {
-      console.log("data lacks id");
       return console.log("received data: " + data);
     } else if (data.id === 'campfire') {
-      console.log("building campfire...");
-      App.campfire.scene = $('#Campfire');
+      console.log('building campfire...');
+      console.log(data);
+      App.campfire.scene = null;
+      App.campfire.id = "#Campfire";
       App.campfire.layers = data.layers;
       return App.campfire.panels = data.panels;
     } else if (data.id in App.chars) {
@@ -62,21 +63,32 @@
     App methods
    */
 
+  App.enter_campfire = to_campfire = function() {
+    var i, layer, len, ref, results, scene;
+    console.log("entering campfire");
+    console.log(App.campfire);
+    scene = $(App.campfire.id);
+    App.campfire.scene = new Parallax(scene);
+    console.log(App.campfire.scene);
+    ref = App.campfire.layers;
+    results = [];
+    for (i = 0, len = ref.length; i < len; i++) {
+      layer = ref[i];
+      console.log("building campfire layer: " + layer.id);
+      results.push(console.log(layer));
+    }
+    return results;
+  };
+
 
   /*
     onload
    */
 
   window.onload = function() {
-    var char, i, len, ref;
-    ref = App.chars;
-    for (i = 0, len = ref.length; i < len; i++) {
-      char = ref[i];
-      console.log("building " + char + "...");
-      $.getJSON("src/json/" + char + ".json", build_from_JSON);
-    }
     console.log('window is loaded, populating campfire...');
-    return $.getJSON('src/json/campfire.json', build_from_JSON);
+    $.getJSON('assets/json/campfire.json', build_from_JSON);
+    return App.enter_campfire();
   };
 
 }).call(this);

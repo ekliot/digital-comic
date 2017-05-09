@@ -1,25 +1,38 @@
 <html>
 
 <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
     <title>ENGL 318 Digital Comic</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <!-- <script type="text/javascript" src="src/js/parallax/parallax.min.js"></script> -->
-    <script type="text/javascript" src="src/js/parallax/jquery.parallax.min.js"></script>
-    <script type="text/javascript" src="src/js/main.js"></script>
+    <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+    <script type="text/javascript" src="assets/js/parallax/parallax.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="assets/style/style.css">
 </head>
 
 <body>
-    <div id="Campfire" class="scene">
+    <div id="Campfire" class="scene" >
         <ul id="CampfireList" class="layers">
+            <div class="layer" data-depth="0.50">
+                <img src="assets/media/campfire/hatun.png" style="width:10%; height:auto">
+            </div>
+
+            <div class="layer" data-depth="0.20">
+                <img src="assets/media/campfire/sabah.png" style="width:10%; height:auto">
+            </div>
+
+            <div class="layer" data-depth="0.10">
+                <img src="assets/media/campfire/fire.png" style="width:10%; height:auto">
+            </div>
         </ul>
     </div>
 
-    <div id="Vignette" class="scene">
+    <!-- <div id="Vignette" class="scene">
         <ul id="VignetteList" class="layers">
         </ul>
-    </div>
+    </div> -->
 </body>
 
 </html>
