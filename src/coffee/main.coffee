@@ -10,27 +10,53 @@
 # jQuery closure
 (($) -> ) jQuery
 
-# init "App"
-window.App = {}
-
-App.campfire = {}
-App.vignette =
-  scene:  $( '#Vignette' )
-  layers: {}
-  panels: {}
-App.chars =
-  markos:  {}
-  genesia: {}
-  khund:   {}
-  djindo:  {}
-  hatun:   {}
-
 ###
   local/private methods
 ###
 
-build_from_JSON = ( data ) ->
+build_parallax_layer = ( depth ) ->
+  layer = """
+          <div class="layer" data-depth="#{depth}">
+              <img src="#{img}">
+          </div>
+          """
 
+# method to transition from campfire to vignette
+enter_vignette = ( char ) ->
+  console.log "entering #{char}'s vignette"
+
+# method to transition from vignette to campfire
+enter_campfire = ->
+  console.log "entering campfire"
+
+  console.log App.campfire
+
+  # insert each layer into position
+  for layer in App.campfire.layers
+    console.log "building campfire layer: #{layer.id}"
+    console.log layer
+
+  App.campfire.scene = new Parallax $( App.campfire.id ).get 0
+
+init_app = ->
+  window.App = {}
+
+  App.campfire = {}
+  App.vignette =
+    scene:  $( '#Vignette' )
+    layers: {}
+    panels: {}
+  App.chars =
+    markos:  {}
+    genesia: {}
+    khund:   {}
+    djindo:  {}
+    hatun:   {}
+
+  App.enter_campfire = enter_campfire
+  App.enter_vignette = enter_vignette
+
+build_from_JSON = ( data ) ->
   # check if data has an id
   if not data.id?
     console.log "received data: #{data}"
@@ -45,6 +71,8 @@ build_from_JSON = ( data ) ->
     App.campfire.layers = data.layers
     App.campfire.panels = data.panels
 
+    App.enter_campfire()
+
   else if data.id of App.chars
     console.log "building #{data.id}..."
 
@@ -56,35 +84,12 @@ build_from_JSON = ( data ) ->
     console.log "received data: #{data}"
 
 ###
-  App methods
-###
-
-# # method to transition from campfire to vignette
-# App.enter_vignette = to_vignette = ( char ) ->
-#   console.log "entering #{char}'s vignette"
-
-# method to transition from vignette to campfire
-App.enter_campfire = to_campfire = () ->
-  console.log "entering campfire"
-
-  console.log App.campfire
-
-  scene = $( App.campfire.id )
-
-  App.campfire.scene = new Parallax scene
-
-  console.log App.campfire.scene
-
-  # insert each layer into position
-  for layer in App.campfire.layers
-    console.log "building campfire layer: #{layer.id}"
-    console.log layer
-
-###
   onload
 ###
 
-window.onload = () ->
+window.onload = ->
+  init_app()
+
   # # parse vignette datas
   # for char in App.chars
   #   console.log "building #{char}..."
@@ -93,5 +98,3 @@ window.onload = () ->
   # init campfire data
   console.log 'window is loaded, populating campfire...'
   $.getJSON 'assets/json/campfire.json', build_from_JSON
-
-  App.enter_campfire()

@@ -11,32 +11,55 @@
  */
 
 (function() {
-  var build_from_JSON, to_campfire;
+  var build_from_JSON, build_parallax_layer, enter_campfire, enter_vignette, init_app;
 
   (function($) {})(jQuery);
-
-  window.App = {};
-
-  App.campfire = {};
-
-  App.vignette = {
-    scene: $('#Vignette'),
-    layers: {},
-    panels: {}
-  };
-
-  App.chars = {
-    markos: {},
-    genesia: {},
-    khund: {},
-    djindo: {},
-    hatun: {}
-  };
 
 
   /*
     local/private methods
    */
+
+  build_parallax_layer = function(depth) {
+    var layer;
+    return layer = "<div class=\"layer\" data-depth=\"" + depth + "\">\n    <img src=\"" + img + "\">\n</div>";
+  };
+
+  enter_vignette = function(char) {
+    return console.log("entering " + char + "'s vignette");
+  };
+
+  enter_campfire = function() {
+    var i, layer, len, ref;
+    console.log("entering campfire");
+    console.log(App.campfire);
+    ref = App.campfire.layers;
+    for (i = 0, len = ref.length; i < len; i++) {
+      layer = ref[i];
+      console.log("building campfire layer: " + layer.id);
+      console.log(layer);
+    }
+    return App.campfire.scene = new Parallax($(App.campfire.id).get(0));
+  };
+
+  init_app = function() {
+    window.App = {};
+    App.campfire = {};
+    App.vignette = {
+      scene: $('#Vignette'),
+      layers: {},
+      panels: {}
+    };
+    App.chars = {
+      markos: {},
+      genesia: {},
+      khund: {},
+      djindo: {},
+      hatun: {}
+    };
+    App.enter_campfire = enter_campfire;
+    return App.enter_vignette = enter_vignette;
+  };
 
   build_from_JSON = function(data) {
     if (data.id == null) {
@@ -47,7 +70,8 @@
       App.campfire.scene = null;
       App.campfire.id = "#Campfire";
       App.campfire.layers = data.layers;
-      return App.campfire.panels = data.panels;
+      App.campfire.panels = data.panels;
+      return App.enter_campfire();
     } else if (data.id in App.chars) {
       console.log("building " + data.id + "...");
       App.chars[data.id].layers = data.layers;
@@ -60,35 +84,13 @@
 
 
   /*
-    App methods
-   */
-
-  App.enter_campfire = to_campfire = function() {
-    var i, layer, len, ref, results, scene;
-    console.log("entering campfire");
-    console.log(App.campfire);
-    scene = $(App.campfire.id);
-    App.campfire.scene = new Parallax(scene);
-    console.log(App.campfire.scene);
-    ref = App.campfire.layers;
-    results = [];
-    for (i = 0, len = ref.length; i < len; i++) {
-      layer = ref[i];
-      console.log("building campfire layer: " + layer.id);
-      results.push(console.log(layer));
-    }
-    return results;
-  };
-
-
-  /*
     onload
    */
 
   window.onload = function() {
+    init_app();
     console.log('window is loaded, populating campfire...');
-    $.getJSON('assets/json/campfire.json', build_from_JSON);
-    return App.enter_campfire();
+    return $.getJSON('assets/json/campfire.json', build_from_JSON);
   };
 
 }).call(this);
