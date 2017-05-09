@@ -2,39 +2,39 @@
   "id": "campfire",
   "layers": [
     { "id": "CampfireSabah",
-      "depth": 0.00,
+      "depth": 0.30,
       "image": "assets/media/campfire/sabah.png",
       "x": 0, "y": 0
     },
     { "id": "CampfireMarkos",
-      "depth": 0.00,
+      "depth": 0.30,
       "image": "~",
       "x": 0, "y": 0
     },
     { "id": "CampfireGenesia",
-      "depth": 0.00,
+      "depth": 0.30,
       "image": "~",
       "x": 0, "y": 0
     },
     { "id": "CampfireKhund",
-      "depth": 0.00,
+      "depth": 0.30,
       "image": "~",
       "x": 0, "y": 0
     },
     { "id": "CampfireDjindo",
-      "depth": 0.00,
+      "depth": 0.30,
       "image": "~",
       "x": 0, "y": 0
     },
     { "id": "CampfireHatun",
-      "depth": 0.00,
+      "depth": 0.30,
       "image": "assets/media/campfire/hatun.png",
       "x": 0, "y": 0
     },
     { "id": "CampfireFire",
-      "depth": 0.00,
+      "depth": 0.05,
       "image": "assets/media/campfire/fire.png",
-      "x": 0, "y": 0
+      "x": 0.5, "y": 0
     }
   ],
   "panels": [

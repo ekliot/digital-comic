@@ -11,7 +11,7 @@
  */
 
 (function() {
-  var build_from_JSON, build_parallax_layer, enter_campfire, enter_vignette, init_app;
+  var build_from_JSON, build_parallax_layer, enter_campfire, enter_vignette, init_app, resize;
 
   (function($) {})(jQuery);
 
@@ -20,9 +20,8 @@
     local/private methods
    */
 
-  build_parallax_layer = function(depth) {
-    var layer;
-    return layer = "<div class=\"layer\" data-depth=\"" + depth + "\">\n    <img src=\"" + img + "\">\n</div>";
+  build_parallax_layer = function(layer) {
+    return layer = "<div id=\"" + layer.id + "\" class=\"layer\" data-depth=\"" + layer.depth + "\">\n    <img src=\"" + layer.image + "\">\n</div>";
   };
 
   enter_vignette = function(char) {
@@ -36,17 +35,25 @@
     ref = App.campfire.layers;
     for (i = 0, len = ref.length; i < len; i++) {
       layer = ref[i];
-      console.log("building campfire layer: " + layer.id);
-      console.log(layer);
+      if (layer.image !== '~') {
+        console.log("building campfire layer: " + layer.id);
+        console.log(build_parallax_layer(layer));
+      }
     }
     return App.campfire.scene = new Parallax($(App.campfire.id).get(0));
   };
 
   init_app = function() {
     window.App = {};
-    App.campfire = {};
+    App.campfire = {
+      id: '#Campfire',
+      scene: null,
+      layers: {},
+      panels: {}
+    };
     App.vignette = {
-      scene: $('#Vignette'),
+      id: '#Vignette',
+      scene: null,
       layers: {},
       panels: {}
     };
@@ -68,7 +75,6 @@
       console.log('building campfire...');
       console.log(data);
       App.campfire.scene = null;
-      App.campfire.id = "#Campfire";
       App.campfire.layers = data.layers;
       App.campfire.panels = data.panels;
       return App.enter_campfire();
@@ -82,6 +88,25 @@
     }
   };
 
+  resize = function() {
+    var body, campfire, i, layer, layer_div, len, letterbox, ref, results;
+    letterbox = 0.5;
+    body = $("body").get(0);
+    body.style.padding = (window.innerWidth * (letterbox / 2)) + "px 0px";
+    campfire = $(App.campfire.id).get(0);
+    campfire.style.width = window.innerWidth + "px";
+    campfire.style.height = (window.innerWidth * letterbox) + "px";
+    console.log("laysz");
+    ref = App.campfire.layers;
+    results = [];
+    for (i = 0, len = ref.length; i < len; i++) {
+      layer = ref[i];
+      layer_div = $(layer.id);
+      results.push(console.log(layer_div));
+    }
+    return results;
+  };
+
 
   /*
     onload
@@ -89,6 +114,7 @@
 
   window.onload = function() {
     init_app();
+    window.onresize = resize();
     console.log('window is loaded, populating campfire...');
     return $.getJSON('assets/json/campfire.json', build_from_JSON);
   };

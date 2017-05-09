@@ -14,12 +14,13 @@
   local/private methods
 ###
 
-build_parallax_layer = ( depth ) ->
+build_parallax_layer = ( layer ) ->
   layer = """
-          <div class="layer" data-depth="#{depth}">
-              <img src="#{img}">
+          <div id="#{ layer.id }" class="layer" data-depth="#{ layer.depth }">
+              <img src="#{ layer.image }">
           </div>
           """
+
 
 # method to transition from campfire to vignette
 enter_vignette = ( char ) ->
@@ -31,19 +32,27 @@ enter_campfire = ->
 
   console.log App.campfire
 
+
+
   # insert each layer into position
   for layer in App.campfire.layers
-    console.log "building campfire layer: #{layer.id}"
-    console.log layer
+    if layer.image isnt '~'
+      console.log "building campfire layer: #{layer.id}"
+      console.log build_parallax_layer layer
 
   App.campfire.scene = new Parallax $( App.campfire.id ).get 0
 
 init_app = ->
   window.App = {}
 
-  App.campfire = {}
+  App.campfire =
+    id: '#Campfire'
+    scene: null
+    layers: {}
+    panels: {}
   App.vignette =
-    scene:  $( '#Vignette' )
+    id: '#Vignette'
+    scene: null
     layers: {}
     panels: {}
   App.chars =
@@ -67,7 +76,6 @@ build_from_JSON = ( data ) ->
     console.log data
 
     App.campfire.scene  = null
-    App.campfire.id     = "#Campfire"
     App.campfire.layers = data.layers
     App.campfire.panels = data.panels
 
@@ -83,12 +91,32 @@ build_from_JSON = ( data ) ->
     console.log "invalid data.id: #{data.id}"
     console.log "received data: #{data}"
 
+resize = ->
+  letterbox = 0.5
+
+  # set body's letterbox0
+  body = $( "body" ).get 0
+  body.style.padding = "#{window.innerWidth * (letterbox / 2)}px 0px"
+
+  # set campfire dimensions
+  campfire = $( App.campfire.id ).get 0
+  campfire.style.width  = "#{window.innerWidth}px"
+  # TODO do height better
+  campfire.style.height = "#{window.innerWidth * letterbox}px"
+
+  console.log "laysz"
+
+  for layer in App.campfire.layers
+    layer_div = $( layer.id )
+    console.log layer_div
+
 ###
   onload
 ###
 
 window.onload = ->
   init_app()
+  window.onresize = resize()
 
   # # parse vignette datas
   # for char in App.chars
