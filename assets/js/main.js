@@ -26,8 +26,8 @@
     win_w = window.innerWidth;
     letterbox = 0.7;
     body = $("body").get(0);
-    body.style.height = (Math.round((win_h * letterbox) - 0.5)) + "px";
-    body.style.padding = (Math.round(win_h * (1 - letterbox) / 2 - 0.5)) + "px 0px";
+    body.style.height = (win_h * letterbox) + "px";
+    body.style.padding = (win_h * (1 - letterbox) / 2) + "px 0px";
     campfire = $(App.campfire.scene_id);
     campfire.width(win_w);
     campfire.height(win_h * letterbox);
@@ -44,8 +44,8 @@
           top: (campfire.height() * layer.y) - (layer_img.height() / 2),
           left: (campfire.width() * layer.x) - (layer_img.width() / 2)
         };
-        console.log(coords);
         layer_img.offset(coords);
+        console.log(coords);
         results.push(layer_img.css({
           'opacity': layer.opacity
         }));

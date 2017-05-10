@@ -2,32 +2,32 @@
   "id": "campfire",
   "layers": [
     { "id": "CampfireHatunShadow",
-      "depth": 0.70,
+      "depth": 0.75,
       "image": "assets/media/campfire/hatun.png",
-      "x": 0.65, "y": 0.5,
+      "x": 0.6, "y": 0.5,
       "scale": 0.945,
       "opacity": 0.4
     },
     { "id": "CampfireSabahShadow",
-      "depth": 0.7,
+      "depth": 0.70,
       "image": "assets/media/campfire/sabah.png",
       "x": 0.5, "y": 0.7,
       "scale": 0.525,
       "opacity": 0.4
     },
-    { "id": "CampfireMarkos",
-      "depth": 0.30,
-      "image": "~",
-      "x": 0, "y": 0,
-      "scale": 0.5,
-      "opacity": 1.0
+    { "id": "CampfireMarkosShadow",
+      "depth": 0.70,
+      "image": "assets/media/campfire/markos.png",
+      "x": 0.38, "y": 0.55,
+      "scale": 0.82,
+      "opacity": 0.4
     },
-    { "id": "CampfireGenesia",
-      "depth": 0.30,
-      "image": "~",
-      "x": 0, "y": 0,
-      "scale": 0.5,
-      "opacity": 1.0
+    { "id": "CampfireGenesiaShadow",
+      "depth": 0.72,
+      "image": "assets/media/campfire/genesia.png",
+      "x": 0.3, "y": 0.53,
+      "scale": 0.945,
+      "opacity": 0.4
     },
     { "id": "CampfireKhund",
       "depth": 0.30,
@@ -43,10 +43,24 @@
       "scale": 0.5,
       "opacity": 1.0
     },
-    { "id": "CampfireHatun",
+    { "id": "CampfireMarkos",
       "depth": 0.30,
+      "image": "assets/media/campfire/markos.png",
+      "x": 0.38, "y": 0.55,
+      "scale": 0.8,
+      "opacity": 1.0
+    },
+    { "id": "CampfireGenesia",
+      "depth": 0.32,
+      "image": "assets/media/campfire/genesia.png",
+      "x": 0.3, "y": 0.53,
+      "scale": 0.9,
+      "opacity": 1.0
+    },
+    { "id": "CampfireHatun",
+      "depth": 0.35,
       "image": "assets/media/campfire/hatun.png",
-      "x": 0.65, "y": 0.5,
+      "x": 0.6, "y": 0.5,
       "scale": 0.9,
       "opacity": 1.0
     },
@@ -58,10 +72,10 @@
       "opacity": 1.0
     },
     { "id": "CampfireFire",
-      "depth": 0.05,
+      "depth": 0.1,
       "image": "assets/media/campfire/fire.png",
       "x": 0.5, "y": 0.8,
-      "scale": 0.5,
+      "scale": 0.4,
       "opacity": 1.0
     }
   ],

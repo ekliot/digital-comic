@@ -21,8 +21,8 @@ resize = ->
 
   # set body's letterbox
   body = $( "body" ).get 0
-  body.style.height  = "#{ Math.round( ( win_h * letterbox ) - 0.5 ) }px"
-  body.style.padding = "#{ Math.round( win_h * ( 1 - letterbox ) / 2 - 0.5 ) }px 0px"
+  body.style.height  = "#{ win_h * letterbox }px"
+  body.style.padding = "#{ win_h * ( 1 - letterbox ) / 2 }px 0px"
 
   # set campfire dimensions
   campfire = $( App.campfire.scene_id )
@@ -37,14 +37,14 @@ resize = ->
 
       # set w/h
       layer_img.height( campfire.height() * layer.scale )
-      layer_img.width(  "auto" )
+      layer_img.width( "auto" )
 
       # set top and left
       coords =
         top: ( campfire.height() * layer.y ) - ( layer_img.height() / 2 )
         left: ( campfire.width() * layer.x ) - (  layer_img.width() / 2 )
-      console.log coords
       layer_img.offset coords
+      console.log coords
 
       # set opacity
       layer_img.css( { 'opacity': layer.opacity } )
