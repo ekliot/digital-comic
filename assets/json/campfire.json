@@ -2,32 +2,32 @@
   "id": "campfire",
   "layers": [
     { "id": "CampfireHatunShadow",
-      "depth": 0.75,
+      "depth": 0.72,
       "image": "assets/media/campfire/hatun.png",
       "x": 0.6, "y": 0.5,
       "scale": 0.945,
-      "opacity": 0.4
+      "opacity": 0.3
     },
     { "id": "CampfireSabahShadow",
       "depth": 0.70,
       "image": "assets/media/campfire/sabah.png",
       "x": 0.5, "y": 0.7,
       "scale": 0.525,
-      "opacity": 0.4
+      "opacity": 0.3
     },
     { "id": "CampfireMarkosShadow",
       "depth": 0.70,
       "image": "assets/media/campfire/markos.png",
       "x": 0.38, "y": 0.55,
       "scale": 0.82,
-      "opacity": 0.4
+      "opacity": 0.3
     },
     { "id": "CampfireGenesiaShadow",
-      "depth": 0.72,
+      "depth": 0.9,
       "image": "assets/media/campfire/genesia.png",
       "x": 0.3, "y": 0.53,
       "scale": 0.945,
-      "opacity": 0.4
+      "opacity": 0.3
     },
     { "id": "CampfireKhund",
       "depth": 0.30,

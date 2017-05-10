@@ -21,39 +21,39 @@
    */
 
   resize = function() {
-    var body, campfire, coords, i, layer, layer_div, layer_img, len, letterbox, ref, results, win_h, win_w;
+    var body, campfire, i, img_width, layer, layer_div, layer_img, len, letterbox, ref, side_pad, top_pad, win_h, win_w;
+    if (App.campfire.scene) {
+      App.campfire.scene.disable();
+    }
     win_h = window.innerHeight;
     win_w = window.innerWidth;
     letterbox = 0.7;
     body = $("body").get(0);
-    body.style.height = (win_h * letterbox) + "px";
-    body.style.padding = (win_h * (1 - letterbox) / 2) + "px 0px";
     campfire = $(App.campfire.scene_id);
-    campfire.width(win_w);
-    campfire.height(win_h * letterbox);
+    body.style.height = (win_h * letterbox) + "px";
+    campfire.width("100%");
+    campfire.height("100%");
+    img_width = 0;
     ref = App.campfire.layers;
-    results = [];
     for (i = 0, len = ref.length; i < len; i++) {
       layer = ref[i];
       if (layer.image !== '~') {
         layer_div = $("#" + layer.id);
         layer_img = $("#" + layer.id + " > img");
-        layer_img.height(campfire.height() * layer.scale);
+        layer_img.height(campfire.height());
         layer_img.width("auto");
-        coords = {
-          top: (campfire.height() * layer.y) - (layer_img.height() / 2),
-          left: (campfire.width() * layer.x) - (layer_img.width() / 2)
-        };
-        layer_img.offset(coords);
-        console.log(coords);
-        results.push(layer_img.css({
+        img_width = layer_img.width();
+        layer_img.css({
           'opacity': layer.opacity
-        }));
-      } else {
-        results.push(void 0);
+        });
       }
     }
-    return results;
+    top_pad = win_h * (1 - letterbox) / 2;
+    side_pad = (win_w - img_width) / 2;
+    body.style.padding = top_pad + "px " + side_pad + "px";
+    if (App.campfire.scene) {
+      return App.campfire.scene.enable();
+    }
   };
 
   build_parallax_layer = function(layer) {
@@ -66,14 +66,12 @@
 
   enter_campfire = function() {
     var campfire_layers, i, layer, layers_to_add, len, ref;
-    console.log("entering campfire");
     campfire_layers = $(App.campfire.layers_id);
     layers_to_add = [];
     ref = App.campfire.layers;
     for (i = 0, len = ref.length; i < len; i++) {
       layer = ref[i];
       if (layer.image !== '~') {
-        console.log("building campfire layer: " + layer.id);
         layers_to_add.push(App.build_parallax_layer(layer));
       }
     }
@@ -84,16 +82,13 @@
 
   build_from_JSON = function(data) {
     if (data.id == null) {
-      return console.log("received data: " + data);
+      return console.log("received data without id: " + data);
     } else if (data.id === 'campfire') {
-      console.log('building campfire...');
-      console.log(data);
       App.campfire.scene = null;
       App.campfire.layers = data.layers;
       App.campfire.panels = data.panels;
       return App.enter_campfire();
     } else if (data.id in App.chars) {
-      console.log("building " + data.id + "...");
       App.chars[data.id].layers = data.layers;
       return App.chars[data.id].panels = data.panels;
     } else {
@@ -141,7 +136,6 @@
     window.onresize = function() {
       return App.resize();
     };
-    console.log('window is loaded, populating campfire...');
     return $.getJSON('assets/json/campfire.json', build_from_JSON);
   };
 

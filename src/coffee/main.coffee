@@ -15,20 +15,25 @@
 ###
 
 resize = ->
+  if App.campfire.scene
+    App.campfire.scene.disable()
+
   win_h = window.innerHeight
   win_w = window.innerWidth
   letterbox = 0.7
 
-  # set body's letterbox
   body = $( "body" ).get 0
+  campfire = $( App.campfire.scene_id )
+
+  # set body's letterbox
   body.style.height  = "#{ win_h * letterbox }px"
-  body.style.padding = "#{ win_h * ( 1 - letterbox ) / 2 }px 0px"
 
   # set campfire dimensions
-  campfire = $( App.campfire.scene_id )
-  campfire.width  win_w
+  campfire.width  "100%"
   # TODO do height better
-  campfire.height win_h * letterbox
+  campfire.height "100%"
+
+  img_width = 0
 
   for layer in App.campfire.layers
     if layer.image isnt '~'
@@ -36,18 +41,27 @@ resize = ->
       layer_img = $( "##{layer.id} > img" )
 
       # set w/h
-      layer_img.height( campfire.height() * layer.scale )
-      layer_img.width( "auto" )
+      layer_img.height campfire.height() # * layer.scale
+      layer_img.width  "auto"
 
-      # set top and left
-      coords =
-        top: ( campfire.height() * layer.y ) - ( layer_img.height() / 2 )
-        left: ( campfire.width() * layer.x ) - (  layer_img.width() / 2 )
-      layer_img.offset coords
-      console.log coords
+      img_width = layer_img.width()
+
+      # # set top and left
+      # coords =
+      #   top: ( campfire.height() * layer.y ) - ( layer_img.height() / 2 )
+      #   left: ( campfire.width() * layer.x ) - (  layer_img.width() / 2 )
+      # layer_img.offset coords
 
       # set opacity
       layer_img.css( { 'opacity': layer.opacity } )
+
+  top_pad = win_h * ( 1 - letterbox ) / 2
+  side_pad = ( win_w - img_width ) / 2
+
+  body.style.padding = "#{ top_pad }px #{ side_pad }px"
+
+  if App.campfire.scene
+    App.campfire.scene.enable()
 
 build_parallax_layer = ( layer ) ->
   layer = """
@@ -63,33 +77,31 @@ enter_vignette = ( char ) ->
 
 # method to transition from vignette to campfire
 enter_campfire = ->
-  console.log "entering campfire"
+  # turn off vignette parallax
 
+  # init vars
   campfire_layers = $( App.campfire.layers_id )
   layers_to_add = []
 
   # insert each layer into position
   for layer in App.campfire.layers
     if layer.image isnt '~'
-      console.log "building campfire layer: #{layer.id}"
       layers_to_add.push App.build_parallax_layer layer
 
   campfire_layers.append layers_to_add
 
+  # resize elements
   App.resize()
 
+  # turn on campfire parallax
   App.campfire.scene = new Parallax $( App.campfire.scene_id ).get 0
 
 build_from_JSON = ( data ) ->
   # check if data has an id
   if not data.id?
-    console.log "received data: #{data}"
+    console.log "received data without id: #{data}"
 
   else if data.id is 'campfire'
-    console.log 'building campfire...'
-
-    console.log data
-
     App.campfire.scene  = null
     App.campfire.layers = data.layers
     App.campfire.panels = data.panels
@@ -97,10 +109,10 @@ build_from_JSON = ( data ) ->
     App.enter_campfire()
 
   else if data.id of App.chars
-    console.log "building #{data.id}..."
-
     App.chars[data.id].layers = data.layers
     App.chars[data.id].panels = data.panels
+
+    # App.enter_vignette
 
   else
     console.log "invalid data.id: #{data.id}"
@@ -145,9 +157,7 @@ window.onload = ->
 
   # # parse vignette datas
   # for char in App.chars
-  #   console.log "building #{char}..."
   #   $.getJSON "assets/json/#{char}.json", build_from_JSON
 
   # init campfire data
-  console.log 'window is loaded, populating campfire...'
   $.getJSON 'assets/json/campfire.json', build_from_JSON
